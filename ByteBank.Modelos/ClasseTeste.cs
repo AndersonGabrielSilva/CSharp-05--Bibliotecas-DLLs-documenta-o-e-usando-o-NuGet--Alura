@@ -16,6 +16,7 @@ namespace ByteBank.Modelos
                 teste.MetodoPublico();
                 //teste.MetodoPrivado();
                 //teste.MetodoProtegido();
+
             }
         }
 
