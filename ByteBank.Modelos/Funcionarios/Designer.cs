@@ -19,7 +19,7 @@ namespace ByteBank.Modelos.Funcionarios
 
         internal protected override double GetBonificacao()
         {
-            return Salario * 0.17;
+            return Salario * 0.15;
         }
     }
 }
