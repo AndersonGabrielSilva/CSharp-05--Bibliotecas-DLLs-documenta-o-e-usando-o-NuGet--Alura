@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ByteBank.Modelos;
+using Humanizer;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -11,12 +12,19 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            // AutenticacaoHelper teste;//É visivel somente dentro da biblioteca (projeto), quando ultiliza o modificador de acesso internal
 
-            ContaCorrente conta = new ContaCorrente(1612,58974);
+            DateTime dataFimPagamento = new DateTime(2020, 3, 15);
+            DateTime dataCorrente = DateTime.Now;
 
-            new ContaCorrente(1612, 45789);
-            Console.WriteLine(conta.Numero);
+            //TimeSpan diferenca = dataFimPagamento - dataCorrente;
+            TimeSpan diferenca = TimeSpan.FromMinutes(60);
+
+            string mensagem = "Vencimento em " + TimeSpanHumanizeExtensions.Humanize(diferenca);
+
+            Console.WriteLine(dataCorrente);
+            Console.WriteLine(dataFimPagamento);
+            Console.WriteLine(mensagem);
+
             Console.ReadLine();
 
         }
